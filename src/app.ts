@@ -7,6 +7,10 @@ const app = express();
 // Parse JSON
 app.use(express.json());
 
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
 // Mount routes
 // app.use('/api/categories', categoryRoutes);
 
