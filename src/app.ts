@@ -1,6 +1,6 @@
 import express from 'express';
-// import categoryRoutes from './modules/category/category.routes.js';
-// import { errorMiddleware } from './core/errors/error.middleware.js';
+import categoryRoutes from './modules/category/category.routes.js';
+import { errorMiddleware } from './core/errors/error.middleware.js';
 
 const app = express();
 
@@ -12,9 +12,9 @@ app.get('/health', (req, res) => {
 });
 
 // Mount routes
-// app.use('/api/categories', categoryRoutes);
+app.use('/api/categories', categoryRoutes);
 
 // // Error middleware (should be last)
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 
 export default app;
