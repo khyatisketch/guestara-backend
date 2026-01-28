@@ -1,5 +1,6 @@
 import express from 'express';
 import categoryRoutes from './modules/category/category.routes.js';
+import itemRoutes from './modules/item/item.routes.js';
 import subcategoryRoutes from './modules/subcategory/subcategory.routes.js';
 import { errorMiddleware } from './core/errors/error.middleware.js';
 
@@ -23,6 +24,7 @@ app.get('/health', (req, res) => {
  * Mounting by path keeps routing scalable and avoids route collisions.
  */
 app.use('/api/categories', categoryRoutes);
+app.use('/api/items', itemRoutes);
 app.use('/api/subcategories', subcategoryRoutes);
 
 /**
