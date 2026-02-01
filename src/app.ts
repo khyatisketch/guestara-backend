@@ -1,6 +1,7 @@
 import express from 'express';
 
 import addonRoutes from './modules/addons/addon.routes.js';
+import bookingRoutes from './modules/booking/booking.routes.js';
 import categoryRoutes from './modules/category/category.routes.js';
 import itemRoutes from './modules/item/item.routes.js';
 import subcategoryRoutes from './modules/subcategory/subcategory.routes.js';
@@ -26,6 +27,7 @@ app.get('/health', (req, res) => {
  * Mounting by path keeps routing scalable and avoids route collisions.
  */
 app.use('/api/addons', addonRoutes);
+app.use('/api/bookings', bookingRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/items', itemRoutes);
 app.use('/api/subcategories', subcategoryRoutes);
