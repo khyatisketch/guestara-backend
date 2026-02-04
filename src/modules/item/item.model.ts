@@ -83,4 +83,9 @@ const ItemSchema = new Schema<ItemDocument>(
 ItemSchema.index({ category_id: 1, name: 1 }, { unique: false });
 ItemSchema.index({ subcategory_id: 1, name: 1 }, { unique: false });
 
+ItemSchema.index({
+  name: 'text',
+  description: 'text',
+});
+
 export const ItemModel = model<ItemDocument>('Item', ItemSchema);
