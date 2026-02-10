@@ -220,6 +220,8 @@ GET /health
 ```
 ## Loom Walkthrough
 
+[Click Here](https://www.loom.com/share/cb8d43333be9431d932274fce098f2ab)
+
 The Loom video covers:
 - Schema design & relationships
 - Pricing engine logic
